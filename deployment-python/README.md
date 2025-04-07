@@ -135,7 +135,7 @@ You can modify the following constants near the top of `deploy.py` to suit your 
 -   `REGION` (string): The AWS region where the S3 bucket will be created (e.g., `"us-east-1"`, `"eu-west-2"`). Ensure this matches your `aws configure` default region or your intended deployment region.
 -   `SOURCE_DIR` (string): The path (relative to `deploy.py`) to the directory containing your website files (HTML, CSS, JS, images, etc.). Default is `"../WebApp"`.
 -   `EXCLUDE_EXTENSIONS` (list of strings): File extensions that will *not* be uploaded to the S3 bucket (e.g., `[".py", ".ps1", ".git"]`).
--   `EXCLUDE_DIRS` (list of strings): Directory names that will *not* be uploaded (e.g., `[".git", "__pycache__", "python-program"]`).
+-   `EXCLUDE_DIRS` (list of strings): Directory names that will *not* be uploaded (e.g., `[".git", "__pycache__"]`).
 
 You can modify the following constants near the top of `cleanup.py`:
 
