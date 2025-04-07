@@ -95,3 +95,10 @@ See the [deployment-terraform README](./deployment-terraform/README.md) for deta
 ## License
 
 This project is open source and available for personal use.
+
+## Support
+
+If you encounter any issues or have questions, please feel free to reach out:
+
+-   **LinkedIn:** [Kunal Chadha](https://www.linkedin.com/in/kunal-chadha-8034161a8/)
+-   **GitHub Issues:** Please file an issue in the repository.
