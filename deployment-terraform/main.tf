@@ -137,41 +137,6 @@ resource "aws_s3_object" "website_files" {
   # depends_on = [aws_s3_bucket.website]
 }
 
-# # Upload website files to S3 bucket
-# module "template_files" {
-#   source = "hashicorp/dir/template"
-  
-#   base_dir = var.webapp_source_dir
-#   template_vars = {}
-# }
-
-# resource "aws_s3_object" "website_files" {
-#   for_each = {
-#     for path, content in module.template_files.files : path => content
-#     if !anytrue([
-#       # Exclude files with certain extensions
-#       anytrue([for ext in var.exclude_file_extensions : endswith(path, ext)]),
-#       # Exclude files in certain directories
-#       anytrue([for dir in var.exclude_directories : strcontains(path, "/${dir}/")])
-#     ])
-#   }
-  
-#   bucket       = aws_s3_bucket.website.id
-#   key          = each.key
-#   content      = each.value.content
-#   etag         = each.value.digests.md5
-#   content_type = lookup(
-#     local.mime_types,
-#     element(split(".", each.key), length(split(".", each.key)) - 1),
-#     "binary/octet-stream"
-#   )
-#   cache_control = lookup(
-#     local.cache_control,
-#     element(split(".", each.key), length(split(".", each.key)) - 1),
-#     local.cache_control["default"]
-#   )
-# }
-
 # Create CloudFront distribution
 resource "aws_cloudfront_distribution" "website" {
   provider = aws.us_east_1
