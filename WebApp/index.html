@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Certified Cloud Practitioner (CLF-C02) Practice Exam</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AWS Certified Cloud Practitioner (CLF-C02)</h1>
+            <h2>Practice Exam</h2>
+            <div class="exam-info">
+                <div class="timer">Time Remaining: <span id="time">90:00</span></div>
+                <div class="progress">Question <span id="current-question">1</span> of <span id="total-questions">0</span></div>
+            </div>
+        </header>
+
+        <main>
+            <div id="intro-screen">
+                <h2>Welcome to the AWS Certified Cloud Practitioner Practice Exam</h2>
+                <p>This practice exam will help you prepare for the AWS Certified Cloud Practitioner (CLF-C02) certification.</p>
+                <p>You will have 90 minutes to complete the exam.</p>
+                <p>Some questions may have multiple correct answers. Read each question carefully.</p>
+                
+                <div id="file-selector" class="file-selector">
+                    <label for="markdown-file">Select Practice Exam:</label>
+                    <select id="markdown-file">
+                        <!-- Options will be loaded dynamically from markdown-files.json -->
+                    </select>
+                </div>
+                
+                <button id="start-exam">Start Exam</button>
+            </div>
+
+            <div id="exam-container" style="display: none;">
+                <div id="question-container">
+                    <!-- Questions will be loaded here dynamically -->
+                </div>
+                
+                <div class="navigation">
+                    <button id="prev-btn" disabled>Previous</button>
+                    <button id="next-btn">Next</button>
+                    <button id="submit-btn" style="display: none;">Submit Exam</button>
+                </div>
+            </div>
+
+            <div id="results-screen" style="display: none;">
+                <h2>Exam Results</h2>
+                <div class="score-container">
+                    <div class="score">
+                        <span id="score">0</span>/<span id="total">0</span>
+                    </div>
+                    <div class="percentage">
+                        <span id="percentage">0%</span>
+                    </div>
+                </div>
+                <div id="review-container">
+                    <h3>Review Your Answers</h3>
+                    <div id="review-questions">
+                        <!-- Review content will be loaded here -->
+                    </div>
+                </div>
+                <button id="restart-btn">Restart Exam</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Created for AWS CLF-C02 Certification</p>
+        </footer>
+    </div>
+
+    <script src="markdown-parser.js"></script>
+    <script src="questions.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
