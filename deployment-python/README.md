@@ -141,11 +141,3 @@ You can modify the following constants near the top of `cleanup.py`:
 
 -   `POLLING_INTERVAL_SECONDS` (integer): How often (in seconds) the script checks the status during CloudFront disable/delete and S3 delete waits.
 -   `CLOUDFRONT_DISABLE_TIMEOUT_SECONDS` / `CLOUDFRONT_DELETE_TIMEOUT_SECONDS` / `S3_DELETE_TIMEOUT_SECONDS` (integers): Maximum time (in seconds) the script will wait for each respective step before timing out.
-
-## Support
-
-If you encounter any issues or have questions, please feel free to reach out:
-
--   **LinkedIn:** [Kunal Chadha](https://www.linkedin.com/in/kunal-chadha-8034161a8/)
--   **GitHub Issues:** Please file an issue in the repository.
-
